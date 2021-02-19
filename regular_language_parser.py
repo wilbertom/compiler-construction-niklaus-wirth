@@ -37,7 +37,8 @@ class RegularLanguageParser:
             self._position += 1
 
     def error(self):
-        raise ParsingError("Symbol does not belong to the language: {self.symbol}\n")
+        message = f"Symbol does not belong to the language: {self.symbol}"
+        raise ParsingError(message)
 
 
 class IndentifierLanguageParser(RegularLanguageParser):
